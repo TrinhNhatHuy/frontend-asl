@@ -1,0 +1,183 @@
+.container-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.main-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-1,
+.card-2 {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-1 h2,
+.card-2 h2 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid lightgray;
+}
+
+.camera-feed {
+    position: relative;
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.camera-feed video, .camera-feed canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.placeholder-text {
+    color: var(--gray);
+    text-align: center;
+    padding: 2rem;
+}
+
+.control-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-start {
+    background-color: var(--light-orange);
+    color: var(--secondary-text);
+}
+
+.btn-start:hover {
+    background-color: transparent;
+    border: 2px solid var(--light-orange);
+    color: var(--light-orange);
+}
+
+.btn-upload {
+    background-color: transparent;
+    border: 2px solid var(--light-orange);
+    color: var(--light-orange);
+    
+}
+
+.btn-upload:hover {
+    background-color: var(--light-orange) ;
+    color: var(--secondary-text);
+}
+
+.results {
+    min-height: 200px;
+}
+
+.prediction-result {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.predicted-letter {
+    font-size: 8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1;
+    margin: 1rem 0;
+}
+
+.confidence {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    color: var(--secondary);
+}
+
+.confidence-bar {
+    flex-grow: 1;
+    height: 12px;
+    background-color: var(--confidence-bar);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.confidence-fill {
+    height: 100%;
+    background-color: var(--secondary);
+    border-radius: 6px;
+    width: 0%;
+    transition: width 1s ease-in-out;
+}
+
+.record-results textarea {
+    width: 100%;
+    height: 150px;
+    padding: 20px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border:2px solid var(--light-orange) ;
+    
+}
+
+.instructions  {
+    margin-left: 20px;
+    margin-bottom: 40px;
+    color: var(--third-text);
+}
+
+.instructions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.instruction-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.instruction-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
